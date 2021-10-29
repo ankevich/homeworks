@@ -2,7 +2,29 @@
 function getArrayParams(arr) {
   let min, max, sum, avg;
 
-  // Ваш код
+  min = arr[0];
+
+  for (i = 0; i < arr.length; i++) {
+    if (min > arr[i]) {
+      min = arr[i];
+    }
+  }
+
+  max = arr[0];
+
+  for (i = 0; i < arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+  }
+
+  sum = 0;
+  
+  for (i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+  }
+
+  avg = Math.round(sum / arr.length * 100) / 100;
 
   return { min: min, max: max, avg: avg };
 }
@@ -21,7 +43,7 @@ function makeWork(arrOfArr, func) {
 
   // Ваш кода
   // for ...
-  
+
   return max;
 }
 
