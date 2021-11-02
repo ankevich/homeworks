@@ -1,10 +1,9 @@
 // Задание 1
 function getArrayParams(arr) {
-  let min = arr[0]
-  let max = arr[0]
-  let sum = 0
+  let min = arr[0];
+  let max = arr[0];
+  let sum = 0;
   let avg;
-
 
   for (i = 0; i < arr.length; i++) {
     if (min > arr[i]) {
@@ -40,9 +39,9 @@ function worker(arr) {
 
 function makeWork(arrOfArr, func) {
   let max = func(arrOfArr[0]);
-  
+
   for (j = 0; j < arrOfArr.length; j++) {
-    let sum = func(arrOfArr[j])
+    let sum = func(arrOfArr[j]);
     if (max < sum) {
       max = sum;
     }
@@ -53,5 +52,20 @@ function makeWork(arrOfArr, func) {
 
 // Задание 3
 function worker2(arr) {
-  // Ваш код
+  let min = arr[0];
+  let max = arr[0];
+
+  for (i = 0; i < arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+  }
+
+  for (i = 0; i < arr.length; i++) {
+    if (min > arr[i]) {
+      min = arr[i];
+    }
+  }
+
+  return max-min
 }
