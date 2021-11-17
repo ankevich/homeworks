@@ -26,15 +26,20 @@ class Triangle {
   getPerimeter() {
     return this.a + this.b + this.c;
   }
-  getArea(){
-      let p = (this.a + this.b + this.c)/2
-      let area = Math.sqrt(p*(p-this.a)*(p-this.b)*(p-this.c))
-      return Number.parseFloat(area.toFixed(3))
+  getArea() {
+    let p = (this.a + this.b + this.c) / 2;
+    let area = Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
+    return Number.parseFloat(area.toFixed(3));
   }
 }
 
-// function getTriangle(a, b, c){
-//     try {
-//         return new Triangle(this.a, this.b, this.c)
-//     }
-// }
+function getTriangle(a, b, c) {
+  try {
+    return new Triangle(a, b, c);
+  } catch {
+    return {
+      getArea: () => "Ошибка! Треугольник не существует",
+      getPerimeter: () => "Ошибка! Треугольник не существует",
+    };
+  }
+}
