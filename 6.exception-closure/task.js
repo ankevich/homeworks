@@ -11,7 +11,3 @@ function validateCount(value){
         return error
     }
 }
-
-console.log(validateCount("10"))
-console.log(validateCount("10.9"))
-console.log(validateCount("Annie"))
